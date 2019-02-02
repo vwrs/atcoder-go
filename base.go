@@ -30,16 +30,6 @@ func nextBigInt() *big.Int {
 	return res
 }
 
-func nextStrSplit() []string {
-	splitted := strings.Fields(nextLine())
-	n := len(splitted)
-	res := make([]string, n)
-	for i, str := range splitted {
-		res[i] = str
-	}
-	return res
-}
-
 func nextIntSplit() []int {
 	splitted := strings.Fields(nextLine())
 	n := len(splitted)
@@ -50,10 +40,22 @@ func nextIntSplit() []int {
 	return res
 }
 
+func nextStrSplit() []string {
+	splitted := strings.Fields(nextLine())
+	n := len(splitted)
+	res := make([]string, n)
+	for i, str := range splitted {
+		res[i] = str
+	}
+	return res
+}
+
+func nextRuneSplit() []string {
+	return strings.Split(nextLine(), "")
+}
+
 func main() {
 	var a, b int
 	fmt.Scanf("%d %d\n", &a, &b)
 	fmt.Printf("receive %d and %d.\n", a, b)
-	// input := nextLine()
-	// fmt.Println(nextIntSplit())
 }
